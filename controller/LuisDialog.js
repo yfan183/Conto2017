@@ -157,7 +157,7 @@ exports.startDialog = function (bot) {
     bot.dialog('QnA', [
         function (session, args, next) {
             session.dialogData.args = args || {};
-            builder.Prompts.text(session, "Do you have a question?");
+            builder.Prompts.text(session, "Ask me a question");
         },
         function (session, results, next) {
             qna.talkToQnA(session, results.response);
@@ -167,7 +167,7 @@ exports.startDialog = function (bot) {
     });
 
     bot.dialog('WelcomeIntent', function (session){
-        session.send("Hi I'm Conto, your transaction tracker. The services I offer includes: \n\n \n\n 1.Track how much you have spend through the transaction through us. \n\n 2.See what kind of things you spent your money on. \n\n 3.Edit your transaction logs if necessary. \n\n 4.Find your nearest bank. \n\n \n\n If you are confused, please let me know. ");
+        session.send("Hi I'm Conto, your transaction tracker. The services I offer includes: \n\n\u200C 1.Track how much you have spend through the transaction through us. \n\n\u200C 2.See what kind of things you spent your money on. \n\n\u200C 3.Edit your transaction logs if necessary. \n\n\u200C 4.Find your nearest bank. \n\n\u200C If you are confused, please let me know. ");
     }).triggerAction({
         matches: 'WelcomeIntent'
     });
