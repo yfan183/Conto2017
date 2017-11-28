@@ -6,11 +6,11 @@ var server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, function () {
    console.log('%s listening to %s', server.name, server.url); 
 });
-//comment used to test branch changes
+//test pushes
 // Create chat connector for communicating with the Bot Framework Service
 var connector = new builder.ChatConnector({
-    appId: process.env.MICROSOFT_APP_ID,
-    appPassword: process.env.MICROSOFT_APP_PASSWORD
+    appId: "3579d48b-c4a2-45a1-91cb-d34c89c927d4",
+    appPassword: "mnMT6644gckijTGPPH3_!^:"
 });
 
 // Listen for messages from users 
